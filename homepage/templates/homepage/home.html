@@ -1,0 +1,17 @@
+<h1>The Wayve</h1>
+
+{% for project in projects %}
+
+<h2>{{ project.title }}</h2>
+
+<p>{{ project.description }}</p>
+
+<<img src="{{ project.image.url }}" alt="wayve" height="250px" width="250px">
+
+{% if project.url %}
+
+<br><a href="{{ project.url}}">Link</a>
+
+{% endif %}
+
+{% endfor %}
